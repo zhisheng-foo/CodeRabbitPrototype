@@ -6,9 +6,12 @@ reviews:
   profile: "assertive" # more thorough; use "chill" if too noisy
   high_level_summary: true
   poem: false
-  review_details: true
+  review_details: false
   commit_status: true
   enable_prompt_for_ai_agents: false
+  in_progress_fortune: false
+  review_status: false
+  changed_files_summary: false
 
   # Don't waste review tokens on generated/build folders
   path_filters:
