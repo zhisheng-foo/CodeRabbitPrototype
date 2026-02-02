@@ -11,7 +11,7 @@ export function DashboardHeader({ status, onRefresh }: Props) {
   return (
     <div className="flex items-center justify-between gap-4 rounded-xl border bg-card/40 px-6 py-4 backdrop-blur">
       <div className="min-w-0">
-        <h1 className="text-xl font-semibold tracking-tight">Prototype Dashboard Test</h1>
+        <h1 className="text-xl font-semibold tracking-tight">Prototype Dashboard Testssssttts</h1>
         <p className="text-sm text-muted-foreground">React (Vite) ⇄ .NET Minimal API</p>
       </div>
 
