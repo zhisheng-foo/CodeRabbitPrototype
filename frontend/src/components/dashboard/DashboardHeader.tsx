@@ -7,6 +7,15 @@ type Props = {
   onRefresh: () => void;
 };
 
+/**
+ * Renders the dashboard header showing the title, subtitle, current status, and a refresh control.
+ *
+ * The refresh button is disabled and shows "Refreshing..." while `status` is "loading".
+ *
+ * @param status - Current status used to render the StatusBadge and control the refresh button state and label.
+ * @param onRefresh - Callback invoked when the refresh button is clicked.
+ * @returns The header element for the prototype dashboard UI.
+ */
 export function DashboardHeader({ status, onRefresh }: Props) {
   return (
     <div className="flex items-center justify-between gap-4 rounded-xl border bg-card/40 px-6 py-4 backdrop-blur">
