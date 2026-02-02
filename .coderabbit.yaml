@@ -1,0 +1,43 @@
+# yaml-language-server: $schema=https://coderabbit.ai/integrations/schema.v2.json
+language: "en-US"
+tone_instructions: "Be strict but practical. Focus on correctness, security, maintainability. Avoid nitpicks unless they prevent bugs."
+
+reviews:
+  profile: "assertive" # more thorough; use "chill" if too noisy
+  high_level_summary: true
+  poem: false
+  review_details: true
+
+  # Don't waste review tokens on generated/build folders
+  path_filters:
+    - "!**/node_modules/**"
+    - "!**/dist/**"
+    - "!**/bin/**"
+    - "!**/obj/**"
+
+  # ======= YOUR SPEC GOES HERE =======
+  path_instructions:
+    - path: "backend/**"
+      instructions: |
+        REVIEW SPEC (Backend):
+        1) All public HTTP endpoints MUST be under /api/... (no bare "/weatherforecast").
+        2) Minimal API is OK, but keep Program.cs thin:
+           - No business logic inside MapGet/MapPost lambdas beyond simple wiring.
+           - Move logic into services/classes when it grows.
+        3) Validate request inputs; return proper status codes (400/404/500), not silent failures.
+        4) Avoid leaking secrets into logs/responses. Do not commit secrets to repo.
+        5) If you suggest changes, show a short code snippet or exact file/line guidance.
+
+    - path: "frontend/**"
+      instructions: |
+        REVIEW SPEC (Frontend):
+        1) No hard-coded API paths inside components. Use src/lib/api.ts only.
+        2) Prefer shadcn/ui components for UI; keep layout consistent.
+        3) Avoid inline styles unless necessary; prefer Tailwind utilities.
+        4) If adding state/data fetching, keep it inside page/container components; keep UI components dumb.
+
+  auto_review:
+    enabled: true
+    drafts: false
+    auto_incremental_review: true
+    ignore_title_keywords: ["wip", "do not merge"]
