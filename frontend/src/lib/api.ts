@@ -10,7 +10,7 @@ function joinUrl(base: string, path: string) {
 }
 
 export async function fetchWeatherForecast(): Promise<WeatherForecast[]> {
-  const url = joinUrl(API_BASE_URL, WEATHERFORECAST_PATH);
+  const url = joinUrl(API_BASE_URL, "/weatherforecast");
 
   const res = await fetch(url);
   if (!res.ok) throw new Error(`HTTP ${res.status}`);
