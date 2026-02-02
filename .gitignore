@@ -1,0 +1,94 @@
+# =========================
+# OS / Editor
+# =========================
+.DS_Store
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+!.vscode/launch.json
+!.vscode/tasks.json
+
+.idea/
+*.iml
+
+# =========================
+# Logs
+# =========================
+*.log
+logs/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+
+# =========================
+# Node / Vite / React
+# =========================
+frontend/node_modules/
+frontend/dist/
+frontend/dist-ssr/
+frontend/.vite/
+frontend/.env.local
+frontend/.env.*.local
+
+# If you store secrets here, keep it ignored:
+# (Note: plain ".env" is often committed for non-secret config, so decide for your team)
+# frontend/.env
+
+# =========================
+# .NET / Visual Studio
+# =========================
+backend/bin/
+backend/obj/
+
+# User-specific files
+backend/**/*.user
+backend/**/*.suo
+backend/**/*.userosscache
+backend/**/*.sln.docstates
+
+# Rider / VS caches
+backend/.vs/
+backend/.idea/
+
+# ASP.NET dev certificates / temp
+**/wwwroot/lib/
+**/appsettings.*.local.json
+
+# =========================
+# Build artifacts (generic)
+# =========================
+bin/
+obj/
+dist/
+build/
+out/
+
+# =========================
+# Coverage / Test results
+# =========================
+TestResults/
+coverage/
+coverage.*
+*.coverage
+*.coveragexml
+
+# =========================
+# Packages / temp
+# =========================
+*.nupkg
+*.snupkg
+.nuget/
+packages/
+*.tmp
+*.temp
+
+# =========================
+# Secrets
+# =========================
+**/*secrets*.json
+**/*secret*.json
