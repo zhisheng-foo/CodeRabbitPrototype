@@ -7,6 +7,8 @@ reviews:
   high_level_summary: true
   poem: false
   review_details: true
+  commit_status: true
+  enable_prompt_for_ai_agents: false
 
   # Don't waste review tokens on generated/build folders
   path_filters:
