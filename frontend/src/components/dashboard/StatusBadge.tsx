@@ -8,7 +8,7 @@ export function StatusBadge({ status }: { status: Status }) {
   > = {
     idle: { label: "Idle", variant: "outline" },
     loading: { label: "Loading", variant: "secondary" },
-    success: { label: "Connected", variant: "secondary" }, // subtle looks nicer in dark mode
+    success: { label: "Healthy", variant: "secondary" },
     error: { label: "Error", variant: "destructive" },
   };
 
